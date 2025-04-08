@@ -5,9 +5,11 @@ import { useEffect, useState } from 'react';
 
 const BackgroundController = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [isClient, setIsClient] = useState(false);
   
   // Track scroll position for color transitions
   useEffect(() => {
+    setIsClient(true);
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
@@ -56,6 +58,29 @@ const BackgroundController = () => {
     [0.9, 1]
   );
 
+  // Seeded random number generator for consistent values
+  const seededRandom = (seed: number) => {
+    const x = Math.sin(seed++) * 10000;
+    return x - Math.floor(x);
+  };
+
+  // Generate consistent particle positions
+  const particles = Array.from({ length: 40 }).map((_, i) => {
+    const seed = i * 1000;
+    return {
+      top: `${seededRandom(seed) * 100}%`,
+      left: `${seededRandom(seed + 1) * 100}%`,
+      opacity: 0.1 + seededRandom(seed + 2) * 0.3,
+      scale: 0.5 + seededRandom(seed + 3) * 0.5,
+      color: i % 6 === 0 ? 'bg-indigo-400/30' : 
+             i % 6 === 1 ? 'bg-pink-400/30' : 
+             i % 6 === 2 ? 'bg-purple-400/30' :
+             i % 6 === 3 ? 'bg-blue-400/30' : 
+             i % 6 === 4 ? 'bg-teal-400/30' : 'bg-violet-400/30',
+      size: i % 4 === 0 ? '1.5' : '1'
+    };
+  });
+
   return (
     <div className="fixed inset-0 -z-5 overflow-hidden pointer-events-none">
       {/* Enhanced animated spotlight that follows scroll */}
@@ -63,7 +88,7 @@ const BackgroundController = () => {
         className="absolute opacity-30 w-[1000px] h-[1000px] rounded-full pointer-events-none transition-transform duration-1000 ease-out"
         style={{
           background: 'radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 70%)',
-          transform: `translate(${scrollY * 0.05}px, ${Math.min(scrollY * 0.02, 30)}px)`,
+          transform: isClient ? `translate(${scrollY * 0.05}px, ${Math.min(scrollY * 0.02, 30)}px)` : 'translate(0px, 0px)',
         }}
       />
       
@@ -165,23 +190,17 @@ const BackgroundController = () => {
       
       {/* Enhanced animated particles with better distribution and aesthetics */}
       <div className="absolute inset-0 pointer-events-none">
-        {Array.from({ length: 40 }).map((_, i) => (
+        {particles.map((particle, i) => (
           <motion.div
             key={`particle-${i}`}
-            className={`absolute w-${i % 4 === 0 ? '1.5' : '1'} h-${i % 4 === 0 ? '1.5' : '1'} rounded-full ${
-              i % 6 === 0 ? 'bg-indigo-400/30' : 
-              i % 6 === 1 ? 'bg-pink-400/30' : 
-              i % 6 === 2 ? 'bg-purple-400/30' :
-              i % 6 === 3 ? 'bg-blue-400/30' : 
-              i % 6 === 4 ? 'bg-teal-400/30' : 'bg-violet-400/30'
-            }`}
+            className={`absolute w-${particle.size} h-${particle.size} rounded-full ${particle.color}`}
             style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              x: `${scrollY * (Math.random() * 0.1 - 0.05)}px`,
-              y: `${scrollY * (Math.random() * 0.05 - 0.025)}px`,
-              opacity: 0.1 + Math.sin(scrollY * 0.01 + i) * 0.3,
-              scale: 0.5 + Math.sin(scrollY * 0.005 + i) * 0.5,
+              top: particle.top,
+              left: particle.left,
+              x: isClient ? `${scrollY * (seededRandom(i * 1000 + 4) * 0.1 - 0.05)}px` : '0px',
+              y: isClient ? `${scrollY * (seededRandom(i * 1000 + 5) * 0.05 - 0.025)}px` : '0px',
+              opacity: isClient ? particle.opacity + Math.sin(scrollY * 0.01 + i) * 0.3 : particle.opacity,
+              scale: isClient ? particle.scale + Math.sin(scrollY * 0.005 + i) * 0.5 : particle.scale,
               filter: 'blur(0.5px)'
             }}
           />
@@ -192,29 +211,29 @@ const BackgroundController = () => {
       <div className="absolute inset-0 pointer-events-none opacity-5">
         <motion.div 
           style={{ 
-            y: scrollY * 0.03,
-            opacity: 0.3 + Math.sin(scrollY * 0.001) * 0.1
+            y: isClient ? scrollY * 0.03 : 0,
+            opacity: isClient ? 0.3 + Math.sin(scrollY * 0.001) * 0.1 : 0.3
           }}
           className="absolute top-[15%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-indigo-400 to-transparent"
         ></motion.div>
         <motion.div 
           style={{ 
-            y: scrollY * -0.02,
-            opacity: 0.3 + Math.sin(scrollY * 0.001 + 2) * 0.1
+            y: isClient ? scrollY * -0.02 : 0,
+            opacity: isClient ? 0.3 + Math.sin(scrollY * 0.001 + 2) * 0.1 : 0.3
           }}
           className="absolute top-[35%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-pink-400 to-transparent"
         ></motion.div>
         <motion.div 
           style={{ 
-            y: scrollY * 0.04,
-            opacity: 0.3 + Math.sin(scrollY * 0.001 + 4) * 0.1
+            y: isClient ? scrollY * 0.04 : 0,
+            opacity: isClient ? 0.3 + Math.sin(scrollY * 0.001 + 4) * 0.1 : 0.3
           }}
           className="absolute top-[65%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-indigo-400 to-transparent"
         ></motion.div>
         <motion.div 
           style={{ 
-            y: scrollY * -0.03,
-            opacity: 0.3 + Math.sin(scrollY * 0.001 + 6) * 0.1
+            y: isClient ? scrollY * -0.03 : 0,
+            opacity: isClient ? 0.3 + Math.sin(scrollY * 0.001 + 6) * 0.1 : 0.3
           }}
           className="absolute top-[85%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-pink-400 to-transparent"
         ></motion.div>
