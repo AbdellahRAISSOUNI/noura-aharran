@@ -38,6 +38,14 @@ const Skills = () => {
       ]
     },
     {
+      title: "Big Data",
+      icon: <FiDatabase size={24} />,
+      color: "indigo",
+      skills: [
+        { name: "Apache Spark", icon: <SiApachespark size={20} />, level: 75 },
+      ]
+    },
+    {
       title: "Tools & Technologies",
       icon: <FiServer size={24} />,
       color: "pink",
@@ -112,7 +120,7 @@ const Skills = () => {
         </motion.div>
 
         <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
