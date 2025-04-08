@@ -111,9 +111,9 @@ const Skills = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-            <span className="text-black">My</span> <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500">Skills</span>
+            <span className="text-black">My</span> <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#861088] to-[#660691]">Skills</span>
           </h2>
-          <div className="h-1.5 w-64 bg-gradient-to-r from-indigo-500 to-pink-500 mx-auto rounded-full shadow-sm"></div>
+          <div className="h-1.5 w-64 bg-gradient-to-r from-[#861088] to-[#660691] mx-auto rounded-full shadow-sm"></div>
           <p className="text-indigo-900 max-w-2xl mx-auto text-lg font-medium mt-6">
             My technical expertise spans across various domains of data science, AI, and software development.
           </p>
@@ -228,7 +228,7 @@ const Skills = () => {
             
             <div className="relative">
               <h3 className="text-2xl font-semibold mb-8 text-center text-gray-800">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-pink-600">Proficiency</span>
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#861088] to-[#660691]">Proficiency</span>
               </h3>
               <div className="space-y-7">
                 {[

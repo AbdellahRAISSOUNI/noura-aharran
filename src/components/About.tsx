@@ -22,9 +22,9 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-            <span className="text-black">About</span> <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500">Me</span>
+            <span className="text-black">About</span> <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#861088] to-[#660691]">Me</span>
           </h2>
-          <div className="h-1.5 w-64 bg-gradient-to-r from-indigo-500 to-pink-500 mx-auto rounded-full shadow-sm"></div>
+          <div className="h-1.5 w-64 bg-gradient-to-r from-[#861088] to-[#660691] mx-auto rounded-full shadow-sm"></div>
           <p className="text-indigo-900 max-w-2xl mx-auto text-lg font-medium mt-6">
             Discovering the world through data and artificial intelligence
           </p>
@@ -116,7 +116,7 @@ const About = () => {
               
               <div className="mb-8 pl-6 border-l-2 border-gradient-to-b from-indigo-400 to-purple-400 relative">
                 <div className="absolute w-5 h-5 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full -left-[11px] top-0 shadow-md shadow-indigo-500/20"></div>
-                <h4 className="text-xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">ENSA Tetouan</h4>
+                <h4 className="text-xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#861088] to-[#660691]">ENSA Tetouan</h4>
                 <p className="text-gray-700">Big Data & AI Engineering</p>
                 <p className="text-gray-600 text-sm mt-1">2021 - Present (4th Year)</p>
               </div>

@@ -59,7 +59,7 @@ const Navbar = () => {
           href="/" 
           className={`text-xl font-bold transition-colors duration-300 ${
             scrolled 
-              ? 'bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-pink-500' 
+              ? 'bg-clip-text text-transparent bg-gradient-to-r from-[#861088] to-[#660691]' 
               : 'text-gray-800'
           }`}
         >
@@ -81,7 +81,7 @@ const Navbar = () => {
               {link.text}
               {activeSection === link.text.toLowerCase() && (
                 <motion.span 
-                  className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full"
+                  className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-[#861088] to-[#660691] rounded-full"
                   layoutId="navIndicator"
                 />
               )}
@@ -92,7 +92,7 @@ const Navbar = () => {
             href="/resume.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-200 flex items-center group"
+            className="px-4 py-2 rounded-full bg-gradient-to-r from-[#861088] to-[#660691] text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-indigo-200 flex items-center group"
           >
             Resume 
             <FiArrowRight className="ml-1 transform group-hover:translate-x-1 transition-transform duration-300" />
@@ -151,7 +151,7 @@ const Navbar = () => {
                   href="/resume.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-medium inline-flex items-center"
+                  className="px-4 py-2 rounded-full bg-gradient-to-r from-[#861088] to-[#660691] text-white font-medium inline-flex items-center"
                   onClick={() => setIsOpen(false)}
                 >
                   Resume <FiArrowRight className="ml-1" />

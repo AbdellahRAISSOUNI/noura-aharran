@@ -133,9 +133,9 @@ const Projects = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-              <span className="text-black">Featured</span> <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500">Projects</span>
+              <span className="text-black">Featured</span> <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#861088] to-[#660691]">Projects</span>
             </h2>
-            <div className="h-1.5 w-64 bg-gradient-to-r from-indigo-500 to-pink-500 mx-auto rounded-full shadow-sm"></div>
+            <div className="h-1.5 w-64 bg-gradient-to-r from-[#861088] to-[#660691] mx-auto rounded-full shadow-sm"></div>
           </motion.div>
           <motion.p 
             initial={{ y: 20, opacity: 0 }}
@@ -444,9 +444,9 @@ const Projects = () => {
             className="text-center mb-10"
           >
             <h3 className="text-2xl font-bold mb-2">
-              <span className="text-black">Tech</span> <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500">Stack</span>
+              <span className="text-black">Tech</span> <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#861088] to-[#660691]">Stack</span>
             </h3>
-            <div className="h-1 w-24 bg-gradient-to-r from-indigo-500 to-pink-500 mx-auto rounded-full"></div>
+            <div className="h-1 w-24 bg-gradient-to-r from-[#861088] to-[#660691] mx-auto rounded-full"></div>
           </motion.div>
           
           {/* Edge fades for infinite scroll */}

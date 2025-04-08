@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Brand */}
           <div className="mb-4 md:mb-0">
-            <Link href="/" className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-pink-500">
+            <Link href="/" className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#861088] to-[#660691]">
               Noura Aharran
             </Link>
           </div>

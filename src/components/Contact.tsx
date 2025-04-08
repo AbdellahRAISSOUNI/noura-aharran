@@ -23,9 +23,9 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-            <span className="text-black">Get In</span> <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500">Touch</span>
+            <span className="text-black">Get In</span> <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#861088] to-[#660691]">Touch</span>
           </h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-indigo-500 to-pink-500 mx-auto rounded-full"></div>
+          <div className="h-1 w-24 bg-gradient-to-r from-[#861088] to-[#660691] mx-auto rounded-full"></div>
           <p className="text-indigo-900 max-w-2xl mx-auto text-lg mt-6">
             Have a project in mind or want to collaborate? I'd love to hear from you!
           </p>
@@ -132,7 +132,7 @@ const Contact = () => {
           >
             <Link 
               href="#projects" 
-              className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-medium shadow-lg hover:shadow-xl transition-shadow group"
+              className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-[#861088] to-[#660691] text-white font-medium shadow-lg hover:shadow-xl transition-shadow group"
             >
               View My Projects
               <motion.div

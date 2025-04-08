@@ -84,14 +84,14 @@ const Hero = () => {
                   transition={{ duration: 0.5, delay: 0.5 }}
                   className="relative inline-block"
                 >
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 relative z-10">
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#861088] via-[#7a0990] to-[#660691] relative z-10">
                     Noura Aharran
                   </span>
                   <motion.div 
                     initial={{ width: "0%" }}
                     animate={{ width: "100%" }}
                     transition={{ duration: 1, delay: 0.9, ease: "easeOut" }}
-                    className="absolute -bottom-2 left-0 h-3 bg-gradient-to-r from-indigo-200/60 to-pink-200/60 w-full -z-10 rounded-sm"
+                    className="absolute -bottom-2 left-0 h-3 bg-gradient-to-r from-[#861088]/60 to-[#660691]/60 w-full -z-10 rounded-sm"
                   ></motion.div>
                 </motion.div>
               </h1>
@@ -121,8 +121,8 @@ const Hero = () => {
                 href="#contact" 
                 className="group relative overflow-hidden rounded-full bg-white/10 p-[1px] shadow-lg"
               >
-                <div className="absolute inset-[-2px] bg-gradient-to-r from-indigo-500 to-pink-500 rounded-full opacity-70 group-hover:opacity-100 blur-sm transition duration-500 group-hover:blur-md"></div>
-                <div className="relative flex items-center justify-center bg-white backdrop-blur-sm hover:bg-gradient-to-r hover:from-indigo-500 hover:to-pink-500 px-8 py-3.5 rounded-full transition-all duration-300 group-hover:text-white">
+                <div className="absolute inset-[-2px] bg-gradient-to-r from-[#861088] to-[#660691] rounded-full opacity-70 group-hover:opacity-100 blur-sm transition duration-500 group-hover:blur-md"></div>
+                <div className="relative flex items-center justify-center bg-white backdrop-blur-sm hover:bg-gradient-to-r hover:from-[#861088] hover:to-[#660691] px-8 py-3.5 rounded-full transition-all duration-300 group-hover:text-white">
                   <span className="relative z-10 flex items-center font-medium">
                     Get in Touch
                     <motion.svg 
@@ -267,14 +267,14 @@ const Hero = () => {
                   >
                     {/* Interactive glow effects on hover */}
                     <motion.div 
-                      className="absolute inset-0 bg-gradient-to-r from-indigo-400/0 via-pink-400/0 to-purple-400/0 opacity-0 group-hover:opacity-100 group-hover:from-indigo-400/30 group-hover:via-pink-400/30 group-hover:to-purple-400/30 transition-all duration-700 blur-xl"
+                      className="absolute inset-0 bg-gradient-to-r from-[#861088]/0 via-[#7a0990]/0 to-[#660691]/0 opacity-0 group-hover:opacity-100 group-hover:from-[#861088]/30 group-hover:via-[#7a0990]/30 group-hover:to-[#660691]/30 transition-all duration-700 blur-xl"
                       animate={{ rotate: [0, 360] }}
                       transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
                     ></motion.div>
                     
                     {/* Rotating gradient border with pulse effect */}
                     <motion.div 
-                      className="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full blur-md opacity-70 group-hover:opacity-100 animate-spin-very-slow"
+                      className="absolute -inset-1 bg-gradient-to-r from-[#861088] via-[#7a0990] to-[#660691] rounded-full blur-md opacity-70 group-hover:opacity-100 animate-spin-very-slow"
                       animate={{ 
                         scale: [1, 1.05, 1],
                         opacity: [0.7, 0.9, 0.7]
