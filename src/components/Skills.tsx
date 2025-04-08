@@ -18,9 +18,8 @@ const Skills = () => {
       color: "indigo",
       skills: [
         { name: "Python", icon: <SiPython size={20} />, level: 95 },
-        { name: "SQL", icon: <FiDatabase size={20} />, level: 90 },
+        { name: "SQL", icon: <FiDatabase size={20} />, level: 60 },
         { name: "Java", icon: <DiJava size={20} />, level: 80 },
-        { name: "R", icon: <FiType size={20} />, level: 85 },
       ]
     },
     {
@@ -29,20 +28,13 @@ const Skills = () => {
       color: "pink",
       skills: [
         { name: "TensorFlow", icon: <SiTensorflow size={20} />, level: 85 },
-        { name: "PyTorch", icon: <SiPytorch size={20} />, level: 80 },
         { name: "Scikit-Learn", icon: <SiScikitlearn size={20} />, level: 90 },
-        { name: "NLP", icon: <GiBrain size={20} />, level: 75 },
-      ]
-    },
-    {
-      title: "Big Data",
-      icon: <FiDatabase size={24} />,
-      color: "indigo",
-      skills: [
-        { name: "Apache Spark", icon: <SiApachespark size={20} />, level: 85 },
-        { name: "Hadoop", icon: <SiApachehadoop size={20} />, level: 75 },
-        { name: "MongoDB", icon: <SiMongodb size={20} />, level: 90 },
-        { name: "PostgreSQL", icon: <SiPostgresql size={20} />, level: 90 },
+        { name: "Numpy", icon: <FiCpu size={20} />, level: 95 },
+        { name: "Pandas", icon: <FiDatabase size={20} />, level: 95 },
+        { name: "OpenCV", icon: <FiZap size={20} />, level: 85 },
+        { name: "NLP/NLTK", icon: <GiBrain size={20} />, level: 80 },
+        { name: "Matplotlib", icon: <FiBarChart2 size={20} />, level: 90 },
+        { name: "Seaborn", icon: <FiBarChart2 size={20} />, level: 90 },
       ]
     },
     {
@@ -50,10 +42,10 @@ const Skills = () => {
       icon: <FiServer size={24} />,
       color: "pink",
       skills: [
-        { name: "Docker", icon: <SiDocker size={20} />, level: 85 },
-        { name: "Git", icon: <SiGit size={20} />, level: 95 },
         { name: "Power BI", icon: <FiBarChart2 size={20} />, level: 90 },
-        { name: "Cloud Computing", icon: <FiCloud size={20} />, level: 85 },
+        { name: "VS Code", icon: <FiTerminal size={20} />, level: 95 },
+        { name: "GitHub", icon: <SiGit size={20} />, level: 95 },
+        { name: "Django", icon: <FiType size={20} />, level: 85 },
       ]
     }
   ];
@@ -120,7 +112,7 @@ const Skills = () => {
         </motion.div>
 
         <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -232,11 +224,11 @@ const Skills = () => {
               </h3>
               <div className="space-y-7">
                 {[
-                  { name: "Data Analysis", percentage: 90, color: "from-indigo-500 via-indigo-600 to-purple-500" },
+                  { name: "Data Analysis", percentage: 70, color: "from-indigo-500 via-indigo-600 to-purple-500" },
                   { name: "Machine Learning", percentage: 85, color: "from-pink-400 via-pink-500 to-purple-500" },
-                  { name: "Big Data Technologies", percentage: 80, color: "from-indigo-400 via-indigo-500 to-purple-500" },
+                  { name: "Big Data Technologies", percentage: 30, color: "from-indigo-400 via-indigo-500 to-purple-500" },
                   { name: "Data Visualization", percentage: 75, color: "from-pink-500 via-purple-500 to-indigo-500" },
-                  { name: "Cloud Computing", percentage: 70, color: "from-indigo-500 via-purple-500 to-pink-500" }
+                  { name: "Cloud Computing", percentage: 50, color: "from-indigo-500 via-purple-500 to-pink-500" }
                 ].map((skill, index) => (
                   <div key={index} className="relative">
                     <motion.div 

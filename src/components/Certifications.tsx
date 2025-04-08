@@ -2,40 +2,45 @@
 
 import { motion } from 'framer-motion';
 import { FiAward, FiExternalLink } from 'react-icons/fi';
+import Image from 'next/image';
 
 const Certifications = () => {
   const certificates = [
     {
-      title: "Machine Learning Specialization",
-      issuer: "Stanford University & DeepLearning.AI",
-      date: "May 2023",
-      description: "Comprehensive specialization covering supervised learning, neural networks, and practical ML applications.",
+      title: "Natural Language Processing with Classification and Vector Spaces",
+      issuer: "DeepLearning.AI",
+      date: "November 2024",
+      description: "Sentiment analysis, word vectors, machine translation and more using classification techniques and vector spaces.",
       badgeColor: "indigo",
-      link: "#",
+      link: "https://www.coursera.org/account/accomplishments/verify/BT5ZV1I9ULOA",
+      image: "/images/certificats/ctf1.jpeg"
     },
     {
-      title: "Data Science Professional Certificate",
-      issuer: "IBM",
-      date: "January 2023",
-      description: "Professional certificate covering data analysis, visualization, ML, and big data technologies.",
+      title: "AI For Everyone",
+      issuer: "DeepLearning.AI",
+      date: "September 2024",
+      description: "AI concepts, terminology, and implementation strategies for non-technical professionals.",
       badgeColor: "pink",
-      link: "#",
+      link: "https://www.coursera.org/account/accomplishments/verify/Z03WNGEZ61HL",
+      image: "/images/certificats/ctf2.jpeg"
     },
     {
-      title: "TensorFlow Developer Certificate",
-      issuer: "Google",
-      date: "November 2022",
-      description: "Advanced certificate validating expertise in building ML models using TensorFlow framework.",
+      title: "Data Visualization with Power BI: Storytelling with Data",
+      issuer: "Coursera",
+      date: "May 2024",
+      description: "Creating impactful data narratives using Microsoft Power BI visualization tools.",
       badgeColor: "indigo",
-      link: "#",
+      link: "https://www.coursera.org/account/accomplishments/verify/33KAJ3GLTT7L",
+      image: "/images/certificats/ctf3.jpeg"
     },
     {
-      title: "Big Data Analytics Certificate",
-      issuer: "Microsoft",
-      date: "August 2022",
-      description: "Certificate focusing on big data processing, analytics techniques, and cloud-based solutions.",
+      title: "Data Visualisation",
+      issuer: "ATI - Analytics Training Institute",
+      date: "May 2024",
+      description: "Advanced techniques for effective data visualization and presentation.",
       badgeColor: "pink",
-      link: "#",
+      link: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-c70cc34c-70ed-497d-bec5-aa1e4d0e04cb.pdf",
+      image: "/images/certificats/ctf4.jpeg"
     }
   ];
 
@@ -128,6 +133,23 @@ const Certifications = () => {
                       {cert.date}
                     </p>
                   </div>
+                </div>
+                
+                <div className="mb-5 overflow-hidden rounded-lg shadow-md">
+                  <a 
+                    href={cert.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block hover:opacity-90 transition-opacity"
+                  >
+                    <Image
+                      src={cert.image}
+                      alt={`${cert.title} Certificate`}
+                      width={800}
+                      height={600}
+                      className="w-full h-auto object-cover"
+                    />
+                  </a>
                 </div>
                 
                 <p className="text-gray-700 mb-5">{cert.description}</p>

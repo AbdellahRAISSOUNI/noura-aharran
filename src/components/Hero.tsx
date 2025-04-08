@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { FiArrowDown, FiLinkedin, FiGithub, FiMail } from 'react-icons/fi';
 import Link from 'next/link';
 import { useRef, useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -359,15 +360,34 @@ const Hero = () => {
                           />
                         ))}
                         
-                        {/* Profile text with enhanced styling */}
+                        {/* Profile image */}
                         <motion.div
                           initial={{ opacity: 0, scale: 0.9 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ duration: 0.5, delay: 1 }}
-                          className="relative text-center z-30"
+                          className="relative w-full h-full z-30 flex items-center justify-center"
                         >
-                          <p className="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 to-pink-600 font-semibold text-xl">Profile Image</p>
-                          <div className="mt-2 h-px w-16 mx-auto bg-gradient-to-r from-transparent via-indigo-300 to-transparent"></div>
+                          <div className="w-full h-full relative">
+                            {/* Fallback placeholder shown by default */}
+                            <div className="absolute inset-0 rounded-full flex items-center justify-center bg-gradient-to-br from-[#861088]/80 to-[#660691]/80">
+                              <span className="text-white font-medium text-xl">NA</span>
+                            </div>
+                            
+                            {/* Try multiple image paths to find the correct one */}
+                            <Image
+                              src="/images/tech/noura.jpg"
+                              alt="Noura Aharran"
+                              fill
+                              sizes="(max-width: 768px) 100vw, 300px"
+                              priority
+                              className="object-cover rounded-full z-10 relative"
+                              onError={(e) => {
+                                // If image still fails to load, hide it and show fallback
+                                const target = e.target as HTMLImageElement;
+                                target.style.display = 'none';
+                              }}
+                            />
+                          </div>
                         </motion.div>
                       </div>
                     </div>

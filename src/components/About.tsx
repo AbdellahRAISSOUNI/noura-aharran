@@ -74,7 +74,7 @@ const About = () => {
                   <div className="p-3 rounded-lg bg-gradient-to-br from-pink-50 to-pink-100 text-pink-500 mr-4 group-hover/item:bg-pink-500 group-hover/item:text-white transition-all duration-300 shadow-sm">
                     <FiDatabase size={22} />
                   </div>
-                  <span className="text-gray-700 font-medium">Data Analysis</span>
+                  <span className="text-gray-700 font-medium">Artificial Intelligence</span>
                 </motion.div>
                 <motion.div 
                   className="flex items-center group/item"
@@ -119,6 +119,13 @@ const About = () => {
                 <h4 className="text-xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#861088] to-[#660691]">ENSA Tetouan</h4>
                 <p className="text-gray-700">Big Data & AI Engineering</p>
                 <p className="text-gray-600 text-sm mt-1">2021 - Present (4th Year)</p>
+              </div>
+              
+              <div className="mb-8 pl-6 border-l-2 border-gradient-to-b from-indigo-400 to-purple-400 relative">
+                <div className="absolute w-5 h-5 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full -left-[11px] top-0 shadow-md shadow-indigo-500/20"></div>
+                <h4 className="text-xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#861088] to-[#660691]">FST Tanger</h4>
+                <p className="text-gray-700">DEUST BCG</p>
+                <p className="text-gray-600 text-sm mt-1">2021</p>
               </div>
               
               {/* You can add more education or experience items here */}
